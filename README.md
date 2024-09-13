@@ -3,6 +3,8 @@
 
 **Truthful Note** is a Next.js application that allows users to receive anonymous messages for various purposes such as product reviews, feedback, confessions, and more. The platform offers a flexible messaging experience with customizable acceptance settings and robust user authentication. 
 
+**Website URL:** truthful-note.vercel.app.
+
 ## Features
 
 - **Anonymous Messaging:** Users can send anonymous messages, making it easy for others to provide honest feedback or share thoughts without revealing their identity.
