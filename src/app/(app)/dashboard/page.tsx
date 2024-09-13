@@ -15,6 +15,7 @@ import { useSession } from 'next-auth/react';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AcceptMessageSchema } from '@/schemas/acceptMessageSchema';
+import Link from 'next/link';
 
 function UserDashboard() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -138,14 +139,16 @@ function UserDashboard() {
       <h1 className="text-4xl font-bold mb-4">User Dashboard</h1>
 
       <div className="mb-4">
-        <h2 className="text-lg font-semibold mb-2">Copy Your Unique Link</h2>{' '}
+        <h2 className="text-lg font-semibold mb-2">Click the link to send anonymous messages</h2>{' '}
         <div className="flex items-center">
-          <input
-            type="text"
-            value={profileUrl}
-            disabled
-            className="input input-bordered w-full p-2 mr-2"
-          />
+          <Link
+            href={profileUrl}
+            target='_blank'
+            className='w-full p-2 mr-2 text-blue-500 hover:text-blue-700 hover:underline transition duration-300 ease-in-out'
+          >
+            {profileUrl}
+          </Link>
+
           <Button onClick={copyToClipboard}>Copy</Button>
         </div>
       </div>
